@@ -1,0 +1,69 @@
+{
+  "rows_used": 100000,
+  "features": [
+    "channel_loss",
+    "noise",
+    "detector_efficiency",
+    "dark_counts",
+    "misalignment"
+  ],
+  "target": "actual_qber / actualQber",
+  "selected_model": "random_forest",
+  "candidate_metrics": {
+    "extra_trees": {
+      "training_r2": 1.0,
+      "testing_r2": 0.618224,
+      "mae": 0.025022,
+      "rmse": 0.085089,
+      "unsafe_detection": {
+        "threshold_qber": 0.11,
+        "accuracy": 0.946,
+        "precision": 0.807636,
+        "recall": 0.866142,
+        "f1": 0.835866
+      }
+    },
+    "random_forest": {
+      "training_r2": 0.946359,
+      "testing_r2": 0.618607,
+      "mae": 0.024827,
+      "rmse": 0.085046,
+      "unsafe_detection": {
+        "threshold_qber": 0.11,
+        "accuracy": 0.9455,
+        "precision": 0.807613,
+        "recall": 0.862047,
+        "f1": 0.833943
+      }
+    },
+    "xgboost": {
+      "training_r2": 0.923987,
+      "testing_r2": 0.610689,
+      "mae": 0.025459,
+      "rmse": 0.085925,
+      "unsafe_detection": {
+        "threshold_qber": 0.11,
+        "accuracy": 0.9452,
+        "precision": 0.808915,
+        "recall": 0.857323,
+        "f1": 0.832416
+      }
+    }
+  },
+  "feature_importance": {
+    "channel_loss": 0.567362,
+    "noise": 0.103649,
+    "detector_efficiency": 0.077687,
+    "dark_counts": 0.053547,
+    "misalignment": 0.197755
+  },
+  "safety_classifier": {
+    "threshold_qber": 0.11,
+    "classification_threshold": 0.15,
+    "accuracy": 0.93355,
+    "precision": 0.720708,
+    "recall": 0.949291,
+    "f1": 0.819356
+  },
+  "seed": 42
+}
